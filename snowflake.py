@@ -1,15 +1,17 @@
-mport streamlit as st
+import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import plotly.express as px
+import os
 
 from openai import OpenAI
 from wordcloud import WordCloud
 
-SENTIMENT_PATH = '/data/in/tables/reviews_sentiment_final.csv'
-KEYWORDS_PATH = '/data/in/tables/reviews_keywords_final.csv'
+IMAGE_PATH = os.path.dirname(os.path.abspath(__file__))
+SENTIMENT_PATH = IMAGE_PATH + '/data/in/tables/reviews_sentiment_final.csv'
+KEYWORDS_PATH = IMAGE_PATH + '/data/in/tables/reviews_keywords_final.csv'
 LOGO_URL = 'https://assets-global.website-files.com/5e21dc6f4c5acf29c35bb32c/5e21e66410e34945f7f25add_Keboola_logo.svg'
 
 
@@ -74,7 +76,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title('London Eye Reviews Sentiment Analysis')
+st.title('CINT Reviews Sentiment Analysis')
 
 data = pd.read_csv(SENTIMENT_PATH)
 data['parsed_date'] = pd.to_datetime(data['parsed_date'], format='mixed').dt.tz_localize(None)
