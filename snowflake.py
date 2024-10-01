@@ -10,8 +10,8 @@ from openai import OpenAI
 from wordcloud import WordCloud
 
 IMAGE_PATH = os.path.dirname(os.path.abspath(__file__))
-SENTIMENT_PATH = IMAGE_PATH + '/data/in/tables/reviews_sentiment_final.csv'
-KEYWORDS_PATH = IMAGE_PATH + '/data/in/tables/reviews_keywords_final.csv'
+SENTIMENT_PATH = '/data/in/tables/reviews_sentiment_final.csv'
+KEYWORDS_PATH = '/data/in/tables/reviews_keywords_final.csv'
 LOGO_URL = 'https://assets-global.website-files.com/5e21dc6f4c5acf29c35bb32c/5e21e66410e34945f7f25add_Keboola_logo.svg'
 
 
