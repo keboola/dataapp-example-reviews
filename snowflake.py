@@ -76,7 +76,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title('CINT Reviews Sentiment Analysis')
+st.title('CNIT Reviews Sentiment Analysis')
 
 data = pd.read_csv(SENTIMENT_PATH)
 data['parsed_date'] = pd.to_datetime(data['parsed_date'], format='mixed').dt.tz_localize(None)
